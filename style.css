@@ -1,53 +1,52 @@
 body {
-  font-family: Georgia, serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fff;
-  color: #000;
+  background-color: #223344;
+  color: #fff;
 }
 
-header {
+h1, h2, h3, h4 {
+  font-family: 'Georgia', serif;
+}
+
+.hero {
   text-align: center;
-  padding: 20px;
+  padding: 40px 20px;
 }
 
-h1, h2 {
-  font-family: Arial, sans-serif;
-}
-
-h1 {
+.hero h1 {
   font-size: 3em;
-  margin: 0;
+  margin-bottom: 10px; 
 }
 
-h2 {
-  font-size: 1.5em;
-  margin: 10px 0 0 0;
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
 }
 
-section {
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Цвет кнопки */
+  color: #fff;
+  text-decoration: none; 
+  border-radius: 5px;
+  margin: 0 10px;
+  transition: background-color 0.3s; /* Плавное изменение цвета */
+}
+
+.btn:hover {
+  background-color: #0062cc; /* Цвет при наведении */
+}
+
+.section {
   padding: 20px;
 }
 
-.photo {
-  float: left;
-  width: 200px;
-  margin-right: 20px;
+.section h2 { 
+  font-size: 2em;
+  margin-bottom: 15px;
 }
 
-.qrcode {
-  float: right; 
-  width: 50px;
-}
-
-.fa-download, .fa-telegram {
-  font-size: 20px;
-}
-
-.fa-download:hover::after {
-  content: " Скачать резюме";
-}
-
-.fa-telegram:hover::after {
-  content: " Связаться в Telegram";
-}
+/* Добавить стили для иконок и других элементов по необходимости */
