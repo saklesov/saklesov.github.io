@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: Georgia, serif;
   margin: 0;
   padding: 0;
   background-color: #fff;
@@ -11,8 +11,11 @@ header {
   padding: 20px;
 }
 
+h1, h2 {
+  font-family: Arial, sans-serif;
+}
+
 h1 {
-  font-family: 'Playfair Display', serif;
   font-size: 3em;
   margin: 0;
 }
@@ -26,10 +29,23 @@ section {
   padding: 20px;
 }
 
+.photo {
+  float: left;
+  width: 200px;
+  margin-right: 20px;
+}
+
+.qrcode {
+  display: block;
+  margin: 0 auto;
+  width: 150px; 
+}
+
 .telegram-button {
-  background-color: #2AABEE; /* Цвет кнопки Telegram */
+  background-color: #2AABEE;
   color: #fff;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
+  margin-right: 10px;
 }
