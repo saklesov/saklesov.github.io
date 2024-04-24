@@ -36,16 +36,18 @@ section {
 }
 
 .qrcode {
-  display: block;
-  margin: 0 auto;
-  width: 150px; 
+  float: right; 
+  width: 50px;
 }
 
-.telegram-button {
-  background-color: #2AABEE;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-right: 10px;
+.fa-download, .fa-telegram {
+  font-size: 20px;
+}
+
+.fa-download:hover::after {
+  content: " Скачать резюме";
+}
+
+.fa-telegram:hover::after {
+  content: " Связаться в Telegram";
 }
