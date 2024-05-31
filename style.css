@@ -1,12 +1,12 @@
-/*  Импортируем шрифт SamsungOne с Google Fonts  */
-@import url('https://fonts.googleapis.com/css2?family=SamsungOne:wght@400;700&display=swap');
+/*  Импортируем шрифты  */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@700&display=swap');
 
 /*  Основные стили  */
 body {
-    font-family: 'SamsungOne', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     line-height: 1.6;
-    background: linear-gradient(to bottom, #f8f8f8, #ffffff);
+    background: linear-gradient(to bottom, #ecf0f1, #ffffff);
     color: #333;
 }
 
@@ -36,16 +36,18 @@ header {
 }
 
 .profile-photo {
-    width: 120px; 
-    height: 180px;
+    width: 180px;  
+    height: 270px; 
     margin-right: 20px;
     object-fit: cover;
     border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
 .profile-info h1 {
     margin: 0 0 5px 0;
     font-size: 24px;
+    font-family: 'Poppins', sans-serif; 
 }
 
 .profile-info p {
@@ -73,7 +75,7 @@ header {
 .button {
     display: inline-block;
     padding: 8px 16px;
-    background-color: #007bff;
+    background-color: #2980b9; 
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
@@ -85,10 +87,9 @@ header {
 }
 
 .button:hover {
-    background-color: #0056b3;
-    box-shadow: 0px 4px 8px rgba(0, 86, 179, 0.4);
+    background-color: #20638f; 
+    box-shadow: 0px 4px 8px rgba(32, 99, 143, 0.4); 
 }
-
 
 /*  Стили для разделов  */
 section {
@@ -104,13 +105,14 @@ section.show {
 }
 
 h2 {
-    color: #007bff;
+    color: #2980b9;  
     margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;  
 }
 
-/* Добавляем иконки к заголовкам разделов */
 h2 i {
-    margin-right: 10px; 
+    margin-right: 10px;
+    color: #2980b9; 
 }
 
 ul {
@@ -152,14 +154,38 @@ ul {
     margin-bottom: 10px;
 }
 
-
 /*  Стили для подвала  */
 footer {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    margin-top: 40px; 
+    margin-top: 40px;
+}
+
+/*  Пример  стилей  для  раздела  "Герой"  */
+#hero {
+    background-image: url("hero-background.png"); 
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#hero h2 {
+    color: #fff; 
+}
+
+#hero p {
+    color: #ecf0f1; 
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/*  Разделители  секций  */
+.container > section:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 40px; 
 }
 
 /*  Адаптивный дизайн  */
@@ -188,5 +214,11 @@ footer {
     .button {
         width: 100%; 
         margin: 5px 0; 
+    }
+
+    /*  Уменьшаем  фото  на  мобильных  устройствах  */
+    .profile-photo {
+        width: 120px;
+        height: 180px;
     }
 }
