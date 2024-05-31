@@ -36,8 +36,8 @@ header {
 }
 
 .profile-photo {
-    width: 200px;  /*  Увеличенный  размер  */
-    height: 300px;  /*  Увеличенный  размер  */
+    width: 200px;  
+    height: 300px;
     margin-right: 20px;
     object-fit: cover;
     border-radius: 10px;
@@ -105,7 +105,7 @@ section.show {
 }
 
 h2 {
-    color: #333;  /*  Цвет  заголовков  разделов  */
+    color: #333; /*  Цвет  заголовков  разделов  */
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
 }
@@ -165,19 +165,17 @@ footer {
 
 /*  Пример  стилей  для  раздела  "Герой"  */
 #hero {
-    background-image: url("hero-background.png");
-    background-size: cover;
-    background-position: center;
+    /* Убираем фоновое изображение */
     padding: 80px 0;
     text-align: center;
 }
 
 #hero h2 {
-    color: #fff;
+    color: #333;  /*  Цвет  заголовка  */
 }
 
 #hero p {
-    color: #ecf0f1;
+    color: #333;  /*  Цвет  текста  */
     max-width: 700px;
     margin: 0 auto;
 }
