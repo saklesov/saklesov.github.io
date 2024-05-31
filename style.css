@@ -6,7 +6,7 @@ body {
     font-family: 'SamsungOne', sans-serif;
     margin: 0;
     line-height: 1.6;
-    background-color: #f8f8f8;
+    background: linear-gradient(to bottom, #f8f8f8, #ffffff);
     color: #333;
 }
 
@@ -21,7 +21,7 @@ header {
     background-color: #fff;
     padding: 30px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative; /*  Для позиционирования QR-кода  */
+    position: relative;
 }
 
 .header-content {
@@ -36,10 +36,11 @@ header {
 }
 
 .profile-photo {
-    width: 100px;
-    height: 150px; /*  Прямоугольная форма  */
+    width: 120px; 
+    height: 180px;
     margin-right: 20px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .profile-info h1 {
@@ -71,24 +72,35 @@ header {
 
 .button {
     display: inline-block;
-    padding: 8px 16px; 
+    padding: 8px 16px;
     background-color: #007bff;
     color: #fff;
     text-decoration: none;
-    border-radius: 4px; 
-    transition: background-color 0.3s ease;
-    font-size: 16px; 
-    margin: 0 10px; 
-    min-width: 150px;  /* Минимальная ширина для кнопок */
+    border-radius: 4px;
+    transition: background-color 0.3s ease, box-shadow 0.2s ease;
+    font-size: 16px;
+    margin: 0 10px;
+    min-width: 150px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .button:hover {
     background-color: #0056b3;
+    box-shadow: 0px 4px 8px rgba(0, 86, 179, 0.4);
 }
+
 
 /*  Стили для разделов  */
 section {
     margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 h2 {
@@ -96,12 +108,17 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* Добавляем иконки к заголовкам разделов */
+h2 i {
+    margin-right: 10px; 
+}
+
 ul {
     list-style-type: disc;
     padding-left: 40px;
 }
 
-/* Стили для опыта работы */
+/*  Стили для опыта работы  */
 .experience-item {
     margin-bottom: 30px;
 }
@@ -116,7 +133,7 @@ ul {
     font-size: 0.9em;
 }
 
-/* Стили для образования */
+/*  Стили для образования  */
 .education-item {
     margin-bottom: 20px;
 }
