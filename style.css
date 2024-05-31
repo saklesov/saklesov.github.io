@@ -178,6 +178,7 @@ footer {
     color: #2980b9; /* Синий цвет текста */
     max-width: 700px;
     margin: 0 auto;
+    font-weight: bold;  /* Делаем текст жирным */
 }
 
 /* Разделители секций */
