@@ -58,7 +58,7 @@ header {
     margin: 0;
     font-size: 18px;
     color: #555;
-    margin-bottom: 40px;  /* Добавляем отступ снизу */
+    margin-bottom: 80px;  /* Добавляем отступ снизу */
 }
 
 /*  Стили  для  QR-кода  */
