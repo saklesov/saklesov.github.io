@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=SamsungOne:wght@400;700&display=swap');
+
 body {
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: 'SamsungOne', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -26,10 +28,11 @@ nav ul {
     display: flex;
     justify-content: center;
     padding: 0;
+    flex-wrap: wrap;
 }
 
 nav li {
-    margin: 0 15px;
+    margin: 10px;
 }
 
 nav a {
@@ -51,4 +54,57 @@ footer {
     text-align: center;
     background-color: #f4f4f4;
     padding: 1em 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1em;
+}
+
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.qr-code {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-top: 1em;
+}
+
+@media (max-width: 600px) {
+    header .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    main {
+        padding: 1em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 80%;
+        text-align: center;
+    }
 }
