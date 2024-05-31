@@ -1,7 +1,7 @@
-/*  Импортируем шрифты  */
+/*  Импортируем  шрифты  */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@700&display=swap');
 
-/*  Основные стили  */
+/*  Основные  стили  */
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
@@ -16,7 +16,7 @@ body {
     padding: 0 20px;
 }
 
-/*  Стили для шапки сайта  */
+/*  Стили  для  шапки  сайта  */
 header {
     background-color: #fff;
     padding: 30px 0;
@@ -36,8 +36,8 @@ header {
 }
 
 .profile-photo {
-    width: 200px; /*  Увеличиваем  ширину  фото  */
-    height: 300px;  /*  Увеличиваем  высоту  фото  */
+    width: 200px;  /*  Увеличенный  размер  */
+    height: 300px;  /*  Увеличенный  размер  */
     margin-right: 20px;
     object-fit: cover;
     border-radius: 10px;
@@ -56,7 +56,7 @@ header {
     color: #555;
 }
 
-/*  Стили для QR-кода  */
+/*  Стили  для  QR-кода  */
 .qr-code {
     position: absolute;
     top: 10px;
@@ -66,7 +66,7 @@ header {
     object-fit: cover;
 }
 
-/*  Стили для кнопок  */
+/*  Стили  для  кнопок  */
 .buttons {
     margin-top: 20px;
     text-align: center;
@@ -91,7 +91,7 @@ header {
     box-shadow: 0px 4px 8px rgba(32, 99, 143, 0.4);
 }
 
-/* Стили для разделов  */
+/*  Стили  для  разделов  */
 section {
     margin-bottom: 40px;
     opacity: 0;
@@ -105,7 +105,7 @@ section.show {
 }
 
 h2 {
-    color: #333; /*  Цвет  заголовков  разделов  */
+    color: #333;  /*  Цвет  заголовков  разделов  */
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
 }
@@ -120,7 +120,7 @@ ul {
     padding-left: 40px;
 }
 
-/* Стили для опыта работы  */
+/*  Стили  для  опыта  работы  */
 .experience-item {
     margin-bottom: 30px;
 }
@@ -135,7 +135,7 @@ ul {
     font-size: 0.9em;
 }
 
-/* Стили для образования  */
+/*  Стили  для  образования  */
 .education-item {
     margin-bottom: 20px;
 }
@@ -144,7 +144,7 @@ ul {
     font-style: italic;
 }
 
-/* Стили для контактов */
+/*  Стили  для  контактов  */
 #contact ul {
     list-style-type: none;
     padding: 0;
@@ -154,7 +154,7 @@ ul {
     margin-bottom: 10px;
 }
 
-/* Стили для подвала  */
+/*  Стили  для  подвала  */
 footer {
     background-color: #333;
     color: #fff;
@@ -173,11 +173,11 @@ footer {
 }
 
 #hero h2 {
-    color: #fff; 
+    color: #fff;
 }
 
 #hero p {
-    color: #ecf0f1; 
+    color: #ecf0f1;
     max-width: 700px;
     margin: 0 auto;
 }
@@ -185,10 +185,10 @@ footer {
 /*  Разделители  секций  */
 .container > section:not(:last-child) {
     border-bottom: 1px solid #ddd;
-    padding-bottom: 40px; 
+    padding-bottom: 40px;
 }
 
-/*  Адаптивный дизайн  */
+/*  Адаптивный  дизайн  */
 @media screen and (max-width: 768px) {
     .header-content {
         flex-direction: column;
@@ -196,24 +196,24 @@ footer {
     }
 
     .qr-code {
-        position: static; 
+        position: static;
         margin: 0 auto 10px;
     }
 
     .profile {
-        margin-bottom: 20px; 
+        margin-bottom: 20px;
     }
 
     .buttons {
         text-align: center;
         display: flex;
         flex-direction: column;
-        align-items: center; 
+        align-items: center;
     }
 
     .button {
-        width: 100%; 
-        margin: 5px 0; 
+        width: 100%;
+        margin: 5px 0;
     }
 
     /*  Уменьшаем  фото  на  мобильных  устройствах  */
