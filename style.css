@@ -21,6 +21,13 @@ header {
     background-color: #fff;
     padding: 30px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /*  Для позиционирования QR-кода  */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .profile {
@@ -29,9 +36,8 @@ header {
 }
 
 .profile-photo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+    width: 100px;
+    height: 50px; /*  Прямоугольная форма  */
     margin-right: 20px;
     object-fit: cover;
 }
@@ -47,6 +53,16 @@ header {
     color: #555;
 }
 
+/*  Стили для QR-кода  */
+.qr-code {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
 /*  Стили для кнопок  */
 .buttons {
     margin-top: 20px;
@@ -55,73 +71,20 @@ header {
 
 .button {
     display: inline-block;
-    padding: 12px 20px;
+    padding: 8px 16px; /*  Уменьшаем отступы  */
     background-color: #007bff;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 4px; /*  Более скругленные углы  */
     transition: background-color 0.3s ease;
+    font-size: 16px; /* Уменьшаем шрифт */
+    margin: 0 5px; /*  Уменьшаем отступы между кнопками  */
 }
 
 .button:hover {
     background-color: #0056b3;
 }
 
-/*  Стили для разделов  */
-section {
-    margin-bottom: 40px;
-}
-
-h2 {
-    color: #007bff;
-    margin-bottom: 20px;
-}
-
-ul {
-    list-style-type: disc;
-    padding-left: 40px;
-}
-
-/* Стили для опыта работы */
-.experience-item {
-    margin-bottom: 30px;
-}
-
-.company {
-    font-weight: bold;
-}
-
-.dates {
-    font-weight: normal;
-    font-style: italic;
-    font-size: 0.9em;
-}
-
-/* Стили для образования */
-.education-item {
-    margin-bottom: 20px;
-}
-
-.speciality {
-    font-style: italic;
-}
-
-/* Стили для контактов */
-#contact ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#contact li {
-    margin-bottom: 10px;
-}
-
-.qr-code {
-    width: 100px;
-    height: 100px;
-    display: block;
-    margin: 20px auto;
-}
 
 /*  Стили для подвала  */
 footer {
@@ -129,17 +92,23 @@ footer {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    margin-top: 40px; /* Отступ от основного контента */
 }
 
 /*  Адаптивный дизайн  */
 @media screen and (max-width: 768px) {
-    .profile {
+    .header-content {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
     }
 
-    .profile-photo {
-        margin: 0 0 20px 0;
+    .qr-code {
+        position: static; /*  Убираем абсолютное позиционирование  */
+        margin: 20px auto 0; /*  Центрируем QR-код  */
+    }
+
+    .profile {
+        margin-bottom: 20px; /*  Добавляем отступ снизу  */
     }
 
     .buttons {
