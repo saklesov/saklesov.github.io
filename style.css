@@ -37,7 +37,7 @@ header {
 
 .profile-photo {
     width: 100px;
-    height: 50px; /*  Прямоугольная форма  */
+    height: 150px; /*  Прямоугольная форма  */
     margin-right: 20px;
     object-fit: cover;
 }
@@ -56,10 +56,10 @@ header {
 /*  Стили для QR-кода  */
 .qr-code {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 80px;
-    height: 80px;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
     object-fit: cover;
 }
 
@@ -71,14 +71,15 @@ header {
 
 .button {
     display: inline-block;
-    padding: 8px 16px; /*  Уменьшаем отступы  */
+    padding: 8px 16px; 
     background-color: #007bff;
     color: #fff;
     text-decoration: none;
-    border-radius: 4px; /*  Более скругленные углы  */
+    border-radius: 4px; 
     transition: background-color 0.3s ease;
-    font-size: 16px; /* Уменьшаем шрифт */
-    margin: 0 5px; /*  Уменьшаем отступы между кнопками  */
+    font-size: 16px; 
+    margin: 0 10px; 
+    min-width: 150px;  /* Минимальная ширина для кнопок */
 }
 
 .button:hover {
@@ -134,13 +135,14 @@ ul {
     margin-bottom: 10px;
 }
 
+
 /*  Стили для подвала  */
 footer {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    margin-top: 40px; /* Отступ от основного контента */
+    margin-top: 40px; 
 }
 
 /*  Адаптивный дизайн  */
@@ -151,21 +153,23 @@ footer {
     }
 
     .qr-code {
-        position: static; /*  Убираем абсолютное позиционирование  */
-        margin: 20px auto 0; /*  Центрируем QR-код  */
+        position: static; 
+        margin: 0 auto 10px;
     }
 
     .profile {
-        margin-bottom: 20px; /*  Добавляем отступ снизу  */
+        margin-bottom: 20px; 
     }
 
     .buttons {
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
     }
 
     .button {
-        display: block;
-        margin: 10px auto;
-        width: 80%;
+        width: 100%; 
+        margin: 5px 0; 
     }
 }
