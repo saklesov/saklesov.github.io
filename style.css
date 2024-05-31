@@ -26,26 +26,21 @@ header {
 
 .header-content {
     display: flex;
-    align-items: center; /* Выравнивание по центру */
     justify-content: space-between;
 }
 
 .profile {
     display: flex;
-    align-items: center; /* Выравниваем элементы по вертикали */
+    align-items: center;
 }
 
 .profile-photo {
-    width: 250px; /* Увеличенный размер */
-    height: 375px; /* Увеличенный размер */
+    width: 250px;
+    height: 375px;
     margin-right: 20px;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.profile-info {
-    /* Убираем лишние стили */
 }
 
 .buttons {
@@ -62,7 +57,7 @@ header {
     border-radius: 4px;
     transition: background-color 0.3s ease, box-shadow 0.2s ease;
     font-size: 16px;
-    margin: 0 10px 10px 0; /*  Добавлен отступ снизу */
+    margin: 0 10px 10px 0;
     min-width: 150px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -172,7 +167,7 @@ footer {
     width: 50px;
     height: 50px;
     object-fit: cover;
-    align-self: flex-start; /* Выравнивание по верхнему краю */
+    align-self: flex-start;
 }
 
 /* Адаптивный дизайн */
@@ -183,8 +178,9 @@ footer {
     }
 
     .qr-code {
-        position: static;
-        margin: 0 auto 10px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
     }
 
     .profile {
