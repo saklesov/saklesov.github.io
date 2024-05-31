@@ -85,6 +85,54 @@ header {
     background-color: #0056b3;
 }
 
+/*  Стили для разделов  */
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 40px;
+}
+
+/* Стили для опыта работы */
+.experience-item {
+    margin-bottom: 30px;
+}
+
+.company {
+    font-weight: bold;
+}
+
+.dates {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/* Стили для образования */
+.education-item {
+    margin-bottom: 20px;
+}
+
+.speciality {
+    font-style: italic;
+}
+
+/* Стили для контактов */
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contact li {
+    margin-bottom: 10px;
+}
 
 /*  Стили для подвала  */
 footer {
