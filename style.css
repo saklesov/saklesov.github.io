@@ -36,18 +36,18 @@ header {
 }
 
 .profile-photo {
-    width: 180px;  
-    height: 270px; 
+    width: 200px; /*  Увеличиваем  ширину  фото  */
+    height: 300px;  /*  Увеличиваем  высоту  фото  */
     margin-right: 20px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .profile-info h1 {
     margin: 0 0 5px 0;
     font-size: 24px;
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
 }
 
 .profile-info p {
@@ -75,7 +75,7 @@ header {
 .button {
     display: inline-block;
     padding: 8px 16px;
-    background-color: #2980b9; 
+    background-color: #2980b9;
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
@@ -87,11 +87,11 @@ header {
 }
 
 .button:hover {
-    background-color: #20638f; 
-    box-shadow: 0px 4px 8px rgba(32, 99, 143, 0.4); 
+    background-color: #20638f;
+    box-shadow: 0px 4px 8px rgba(32, 99, 143, 0.4);
 }
 
-/*  Стили для разделов  */
+/* Стили для разделов  */
 section {
     margin-bottom: 40px;
     opacity: 0;
@@ -105,14 +105,14 @@ section.show {
 }
 
 h2 {
-    color: #2980b9;  
+    color: #333; /*  Цвет  заголовков  разделов  */
     margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;  
+    font-family: 'Poppins', sans-serif;
 }
 
 h2 i {
     margin-right: 10px;
-    color: #2980b9; 
+    color: #2980b9;
 }
 
 ul {
@@ -120,7 +120,7 @@ ul {
     padding-left: 40px;
 }
 
-/*  Стили для опыта работы  */
+/* Стили для опыта работы  */
 .experience-item {
     margin-bottom: 30px;
 }
@@ -135,7 +135,7 @@ ul {
     font-size: 0.9em;
 }
 
-/*  Стили для образования  */
+/* Стили для образования  */
 .education-item {
     margin-bottom: 20px;
 }
@@ -154,7 +154,7 @@ ul {
     margin-bottom: 10px;
 }
 
-/*  Стили для подвала  */
+/* Стили для подвала  */
 footer {
     background-color: #333;
     color: #fff;
@@ -165,7 +165,7 @@ footer {
 
 /*  Пример  стилей  для  раздела  "Герой"  */
 #hero {
-    background-image: url("hero-background.png"); 
+    background-image: url("hero-background.png");
     background-size: cover;
     background-position: center;
     padding: 80px 0;
