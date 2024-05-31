@@ -26,28 +26,22 @@ header {
 
 .header-content {
     display: flex;
-    align-items: flex-start; /* Выравнивание по верхнему краю */
+    align-items: center;
     justify-content: space-between;
 }
 
 .profile {
     display: flex;
+    align-items: center;
 }
 
 .profile-photo {
-    width: 250px; /* Увеличенный размер */
-    height: 375px; /* Увеличенный размер */
+    width: 200px; 
+    height: 300px;
     margin-right: 20px;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.profile-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-    height: 100%; 
 }
 
 .profile-info h1 {
@@ -64,15 +58,18 @@ header {
 
 /* Стили для QR-кода */
 .qr-code {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     width: 50px;
     height: 50px;
     object-fit: cover;
-    align-self: flex-start; 
 }
 
 /* Стили для кнопок */
 .buttons {
-    text-align: left;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .button {
@@ -84,7 +81,7 @@ header {
     border-radius: 4px;
     transition: background-color 0.3s ease, box-shadow 0.2s ease;
     font-size: 16px;
-    margin: 0 10px 10px 0; /*  Добавлен отступ снизу */
+    margin: 0 10px;
     min-width: 150px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -108,14 +105,14 @@ section.show {
 }
 
 h2 {
-    color: #2980b9; /* Синий цвет заголовков */
+    color: #2980b9;  /* Синий цвет заголовков */
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
 }
 
 h2 i {
     margin-right: 10px;
-    color: #2980b9; /* Синий цвет иконок */
+    color: #2980b9;  /* Синий цвет иконок */
 }
 
 ul {
@@ -168,6 +165,7 @@ footer {
 
 /* Пример стилей для раздела "Герой" */
 #hero {
+    /* Убираем фоновое изображение */
     padding: 80px 0;
     text-align: center;
 }
@@ -180,13 +178,12 @@ footer {
     color: #2980b9; /* Синий цвет текста */
     max-width: 700px;
     margin: 0 auto;
-    font-weight: bold; 
 }
 
 /* Разделители секций */
 .container > section:not(:last-child) {
     border-bottom: 1px solid #ddd;
-    padding-bottom: 40px; 
+    padding-bottom: 40px;
 }
 
 /* Адаптивный дизайн */
