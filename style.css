@@ -1,8 +1,11 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Georgia', 'Times New Roman', serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #fdfdfd;
+    color: #333;
+    line-height: 1.6;
 }
 
 header {
@@ -11,10 +14,11 @@ header {
     padding: 2em 0;
 }
 
-header img {
+header .profile-photo {
     border-radius: 50%;
     width: 150px;
     height: 150px;
+    object-fit: cover;
 }
 
 nav ul {
@@ -35,6 +39,8 @@ nav a {
 
 main {
     padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 section {
