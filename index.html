@@ -6,6 +6,9 @@
     <title>Клецов Сергей - Опытный менеджер по работе с клиентами</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -30,7 +33,7 @@
     </header>
 
     <main class="container">
-        <section id="hero">
+        <section id="hero" class="show">
             <div class="hero-content">
                 <h2>ОБО МНЕ</h2>
                 <p>Занимаюсь менеджментом более 13 лет. За это время я развил навыки ведения переговоров, управления проектами и решения конфликтных ситуаций. 
@@ -146,7 +149,7 @@
                 let sectionTop = section.getBoundingClientRect().top;
                 let windowBottom = window.innerHeight;
 
-                if (sectionTop < windowBottom - 100) { // Настройка момента появления
+                if (sectionTop < windowBottom - 100) { 
                     section.classList.add('show');
                 } else {
                     section.classList.remove('show');
