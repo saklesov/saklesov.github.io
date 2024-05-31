@@ -58,6 +58,7 @@ header {
     margin: 0;
     font-size: 18px;
     color: #555;
+    margin-bottom: 40px;  /* Добавляем отступ снизу */
 }
 
 /*  Стили  для  QR-кода  */
@@ -75,7 +76,7 @@ header {
 /*  Стили  для  кнопок  */
 .buttons {
     display: flex;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .button {
