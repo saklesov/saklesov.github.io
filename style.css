@@ -195,8 +195,7 @@ footer {
     }
 
     .qr-code {
-        position: static;
-        margin: 0 auto 10px;
+        display: none; /* Скрываем QR-код на мобильных */
     }
 
     .profile {
@@ -220,4 +219,31 @@ footer {
         width: 120px;
         height: 180px;
     }
+}
+
+@media screen and (min-width: 768px) {
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-photo {
+    width: 200px; 
+    height: 300px;
+    margin-bottom: 20px; /* Добавьте отступ снизу для фото */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .button {
+    margin-bottom: 10px; /* Добавьте отступ снизу для кнопок */
+  }
 }
