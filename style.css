@@ -26,17 +26,18 @@ header {
 
 .header-content {
     display: flex;
-    align-items: flex-start; /* Выравнивание по верху */
+    align-items: center;
     justify-content: space-between;
 }
 
 .profile {
     display: flex;
+    align-items: center; 
 }
 
 .profile-photo {
-    width: 250px;
-    height: 375px;
+    width: 150px; 
+    height: 225px; 
     margin-right: 20px;
     object-fit: cover;
     border-radius: 10px;
@@ -46,7 +47,7 @@ header {
 .profile-info {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;  /*  Выравнивание  по  нижнему  краю  */
+    text-align: left; 
 }
 
 .profile-info h1 {
@@ -58,12 +59,11 @@ header {
     margin: 0;
     font-size: 18px;
     color: #555;
-    margin-bottom: 110px;  /* Добавляем отступ снизу */
 }
 
 /*  Стили  для  QR-кода  */
-.qr-code-link { /*  Новый  класс  для  ссылки  с  QR-кодом */
-    display: none;  /* Скрываем QR-код по умолчанию */
+.qr-code-link {
+    display: none;
     align-self: flex-start;
 }
 
@@ -88,8 +88,7 @@ header {
     border-radius: 4px;
     transition: background-color 0.3s ease, box-shadow 0.2s ease;
     font-size: 16px;
-    margin: 0 10px 10px 0; /*  Добавлен отступ снизу */
-    min-width: 150px;
+    margin-right: 10px; 
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -101,25 +100,17 @@ header {
 /*  Стили  для  разделов  */
 section {
     margin-bottom: 40px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-section.show {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 h2 {
-    color: #2980b9; /*  Синий  цвет  заголовков  */
+    color: #2980b9; 
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
 }
 
 h2 i {
     margin-right: 10px;
-    color: #2980b9; /*  Синий  цвет  иконок  */
+    color: #2980b9; 
 }
 
 ul {
@@ -128,8 +119,18 @@ ul {
 }
 
 /*  Стили  для  опыта  работы  */
+.experience-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /*  Адаптивная  сетка  */
+    gap: 20px;
+}
+
 .experience-item {
-    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .company {
@@ -143,12 +144,31 @@ ul {
 }
 
 /*  Стили  для  образования  */
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
 .education-item {
-    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .speciality {
     font-style: italic;
+}
+
+/*  Стили  для  списка  навыков  */
+.skills-list {
+    display: grid; /*  Используем  сетку  для  компактного  отображения  */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /*  Адаптивное  количество  колонок  */
+    gap: 10px; 
+    list-style-type: none; 
+    padding: 0; 
 }
 
 /*  Стили  для  контактов  */
@@ -172,25 +192,28 @@ footer {
 
 /*  Пример  стилей  для  раздела  "Герой"  */
 #hero {
+    background-color: #f8f9fa; 
     padding: 80px 0;
     text-align: center;
+    border-bottom: 1px solid #ddd; 
 }
 
 #hero h2 {
-    color: #2980b9; /*  Синий  цвет  заголовка  */
+    color: #2980b9; 
+    margin-bottom: 20px; 
 }
 
 #hero p {
-    color: #2980b9; /*  Синий  цвет  текста  */
+    color: #333; 
     max-width: 700px;
     margin: 0 auto;
-    font-weight: bold;
+    line-height: 1.8; 
 }
 
 /*  Разделители  секций  */
 .container > section:not(:last-child) {
     border-bottom: 1px solid #ddd;
-    padding-bottom: 40px;
+    padding-bottom: 40px; 
 }
 
 /*  Адаптивный  дизайн  */
@@ -200,7 +223,6 @@ footer {
         align-items: center;
     }
 
-    /*  Скрываем  QR-код  на  мобильных  */
     .qr-code-link {
         display: none;
     }
@@ -210,26 +232,28 @@ footer {
     }
 
     .buttons {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .button {
-        width: 100%;
-        margin: 5px 0;
+        width: 100%; 
+        margin: 5px 0; 
+        text-align: center; 
     }
 
-    /*  Уменьшаем  фото  на  мобильных  устройствах  */
     .profile-photo {
         width: 120px;
         height: 180px;
     }
+
+    .experience-container,
+    .education-container {
+        grid-template-columns: 1fr;
+    }
 }
 
-/*  Показываем  QR-код  на  десктопных  устройствах  */
-@media  screen  and  (min-width:  769px) {
+@media screen and (min-width: 769px) {
     .qr-code-link {
         display: block;
     }
