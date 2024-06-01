@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Клецов Сергей - Опытный менеджер по работе с клиентами</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Клецов Сергей - Опытный менеджер по работе с клиентами</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
+  <header>
     <div class="container">
-        <div class="header-content">
-            <div class="profile">
-                <img src="profile-photo.jpg" alt="Клецов Сергей" class="profile-photo">
-                <div class="profile-info">
-                    <h1>Клецов Сергей Александрович</h1>
-                    <p>Опытный менеджер по работе с клиентами</p>
-                </div>
+      <div class="header-content">
+        <div class="profile">
+          <img src="profile-photo.jpg" alt="Клецов Сергей" class="profile-photo"> 
+          <div class="profile-info">
+            <h1>Клецов Сергей Александрович</h1>
+            <p>Опытный менеджер по работе с клиентами</p>
+            <div class="buttons desktop-buttons">
+              <a href="s.a.klesov@outlook.com" class="button">Скачать резюме</a>
+              <a href="https://t.me/saklesov" class="button" target="_blank">Telegram</a>
             </div>
-            <div class="buttons">
-                <a href="s.a.klesov@outlook.com" class="button">Скачать резюме</a>
-                <a href="https://t.me/saklesov" class="button" target="_blank">Telegram</a>
-                <a href="qr-code.png" class="qr-code-link" target="_blank">
-                    <img src="qr-code.png" alt="QR-код" class="qr-code">
-                </a>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-</header>
-
-<main class="container">
+  </header>
+  
+  <main class="container">
     <section id="hero">
         <div class="hero-content">
             <h2>ОБО МНЕ</h2>
@@ -148,14 +145,14 @@
     </section>
 </main>
 
-<footer>
+  <footer>
     <div class="container">
-        <p>© 2023 Клецов Сергей. Все права защищены.</p>
+      <p>© 2023 Клецов Сергей. Все права защищены.</p>
     </div>
-</footer>
-<script>
-    window.addEventListener('scroll', function() {
-        let sections = document.querySelectorAll('.container > section');
+  </footer>
+  <script>
+   window.addEventListener('scroll', function() {
+        let sections = document.querySelectorAll('.container > section:not(#hero)'); // Исключаем #hero из анимации
         for (let i = 0; i < sections.length; i++) {
             let section = sections[i];
             let sectionTop = section.getBoundingClientRect().top;
@@ -168,6 +165,6 @@
             }
         }
     });
-</script>
+  </script>
 </body>
 </html>
