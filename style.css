@@ -19,27 +19,27 @@ body {
 /* Стили для шапки сайта */
 header {
     background-color: #fff;
-    padding: 20px 0; 
+    padding: 20px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
 }
 
 .header-content {
     display: flex;
-    align-items: flex-start; 
+    align-items: flex-start;
     justify-content: space-between;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 .profile {
     display: flex;
-    align-items: center; 
-    margin-bottom: 20px; 
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .profile-photo {
-    width: 150px; 
-    height: 225px; 
+    width: 150px;
+    height: 225px;
     margin-right: 20px;
     object-fit: cover;
     border-radius: 10px;
@@ -64,9 +64,9 @@ header {
 
 /* Стили для QR-кода */
 .qr-code-link {
-    display: none; 
+    display: none;
     align-self: flex-start;
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 .qr-code {
@@ -78,7 +78,7 @@ header {
 /* Стили для кнопок */
 .buttons {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
 }
@@ -92,8 +92,8 @@ header {
     border-radius: 4px;
     transition: background-color 0.3s ease, box-shadow 0.2s ease;
     font-size: 16px;
-    margin: 5px; 
-    min-width: 120px; 
+    margin: 5px;
+    min-width: 120px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -105,25 +105,25 @@ header {
 /* Стили для разделов */
 section {
     margin-bottom: 40px;
-    opacity: 0;  /* Начальная прозрачность */
+    opacity: 0; /* Начальная прозрачность */
     transform: translateY(20px); /* Начальное смещение */
     transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Параметры анимации */
 }
 
 section.show {
-    opacity: 1; 
+    opacity: 1;
     transform: translateY(0);
 }
 
 h2 {
-    color: #2980b9; 
+    color: #2980b9;
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
 }
 
 h2 i {
     margin-right: 10px;
-    color: #2980b9; 
+    color: #2980b9;
 }
 
 ul {
@@ -176,16 +176,16 @@ footer {
 
 /* Пример стилей для раздела "Герой" */
 #hero {
-    padding: 60px 0; 
+    padding: 60px 0;
     text-align: center;
 }
 
 #hero h2 {
-    color: #2980b9; 
+    color: #2980b9;
 }
 
 #hero p {
-    color: #2980b9; 
+    color: #2980b9;
     max-width: 700px;
     margin: 0 auto;
     font-weight: bold;
@@ -206,15 +206,15 @@ footer {
 
     .profile {
         margin-bottom: 20px;
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column;
+        align-items: center;
     }
-    
+
     .profile-photo {
-        margin-right: 0; 
-        margin-bottom: 10px; 
+        margin-right: 0;
+        margin-bottom: 10px;
     }
-    
+
     .buttons {
         text-align: center;
         display: flex;
@@ -231,7 +231,7 @@ footer {
     .qr-code-link {
         display: none;
     }
-} 
+}
 
 /* Показываем QR-код на десктопных устройствах */
 @media screen and (min-width: 769px) {
