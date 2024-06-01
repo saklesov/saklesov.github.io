@@ -40,9 +40,9 @@ header {
 /* Стили для фото профиля */
 .profile-photo {
   width: 150px;
-  height: 150px; /* Квадратная форма */
+  height: 225px; /* Возвращаем исходную высоту */ 
   margin-right: 20px;
-  object-fit: cover; /* Сохраняем пропорции */
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -212,6 +212,10 @@ footer {
   .profile-info h1, 
   .profile-info p { 
     text-align: center;
+  }
+
+  .desktop-buttons {
+    display: none; /* Скрываем кнопки на мобильных */
   }
 }
 
