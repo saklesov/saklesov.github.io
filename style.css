@@ -105,13 +105,13 @@ header {
 /* Стили для разделов */
 section {
     margin-bottom: 40px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    opacity: 0;  /* Начальная прозрачность */
+    transform: translateY(20px); /* Начальное смещение */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Параметры анимации */
 }
 
 section.show {
-    opacity: 1;
+    opacity: 1; 
     transform: translateY(0);
 }
 
