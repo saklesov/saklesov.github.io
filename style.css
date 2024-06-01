@@ -1,7 +1,7 @@
-/*  Импортируем  шрифты  */
+/* Импортируем шрифты */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@700&display=swap');
 
-/*  Основные  стили  */
+/* Основные стили */
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
@@ -16,28 +16,30 @@ body {
     padding: 0 20px;
 }
 
-/*  Стили  для  шапки  сайта  */
+/* Стили для шапки сайта */
 header {
     background-color: #fff;
-    padding: 30px 0;
+    padding: 20px 0; /* Уменьшаем padding */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
 }
 
 .header-content {
     display: flex;
-    align-items: center;
+    align-items: flex-start; 
     justify-content: space-between;
+    flex-wrap: wrap; /* Позволяем элементам переноситься */
 }
 
 .profile {
     display: flex;
-    align-items: center; 
+    align-items: center; /* Выравнивание по центру */
+    margin-bottom: 20px; 
 }
 
 .profile-photo {
-    width: 150px; 
-    height: 225px; 
+    width: 150px; /* Уменьшаем ширину фото */
+    height: 225px; /* Уменьшаем высоту фото */
     margin-right: 20px;
     object-fit: cover;
     border-radius: 10px;
@@ -47,12 +49,11 @@ header {
 .profile-info {
     display: flex;
     flex-direction: column;
-    text-align: left; 
 }
 
 .profile-info h1 {
     margin: 0 0 5px 0;
-    font-size: 24px; 
+    font-size: 24px;
 }
 
 .profile-info p {
@@ -61,10 +62,11 @@ header {
     color: #555;
 }
 
-/*  Стили  для  QR-кода  */
+/* Стили для QR-кода */
 .qr-code-link {
-    display: none;
+    display: none; 
     align-self: flex-start;
+    margin-top: 20px; /* Добавляем отступ сверху */
 }
 
 .qr-code {
@@ -73,9 +75,11 @@ header {
     object-fit: cover;
 }
 
-/*  Стили  для  кнопок  */
+/* Стили для кнопок */
 .buttons {
     display: flex;
+    flex-wrap: wrap; /* Позволяем кнопкам переноситься */
+    justify-content: center; /* Центрируем кнопки */
     margin-top: 20px;
 }
 
@@ -88,7 +92,8 @@ header {
     border-radius: 4px;
     transition: background-color 0.3s ease, box-shadow 0.2s ease;
     font-size: 16px;
-    margin-right: 10px; 
+    margin: 5px; 
+    min-width: 120px; /* Уменьшаем минимальную ширину */
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -97,9 +102,17 @@ header {
     box-shadow: 0px 4px 8px rgba(32, 99, 143, 0.4);
 }
 
-/*  Стили  для  разделов  */
+/* Стили для разделов */
 section {
     margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 h2 {
@@ -118,19 +131,9 @@ ul {
     padding-left: 40px;
 }
 
-/*  Стили  для  опыта  работы  */
-.experience-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /*  Адаптивная  сетка  */
-    gap: 20px;
-}
-
+/* Стили для опыта работы */
 .experience-item {
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: #fff; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 30px;
 }
 
 .company {
@@ -143,35 +146,16 @@ ul {
     font-size: 0.9em;
 }
 
-/*  Стили  для  образования  */
-.education-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
+/* Стили для образования */
 .education-item {
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: #fff; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 20px;
 }
 
 .speciality {
     font-style: italic;
 }
 
-/*  Стили  для  списка  навыков  */
-.skills-list {
-    display: grid; /*  Используем  сетку  для  компактного  отображения  */
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /*  Адаптивное  количество  колонок  */
-    gap: 10px; 
-    list-style-type: none; 
-    padding: 0; 
-}
-
-/*  Стили  для  контактов  */
+/* Стили для контактов */
 #contact ul {
     list-style-type: none;
     padding: 0;
@@ -181,7 +165,7 @@ ul {
     margin-bottom: 10px;
 }
 
-/*  Стили  для  подвала  */
+/* Стили для подвала */
 footer {
     background-color: #2980b9;
     color: #fff;
@@ -190,69 +174,66 @@ footer {
     margin-top: 40px;
 }
 
-/*  Пример  стилей  для  раздела  "Герой"  */
+/* Пример стилей для раздела "Герой" */
 #hero {
-    background-color: #f8f9fa; 
-    padding: 80px 0;
+    padding: 60px 0; /* Уменьшаем padding */
     text-align: center;
-    border-bottom: 1px solid #ddd; 
 }
 
 #hero h2 {
     color: #2980b9; 
-    margin-bottom: 20px; 
 }
 
 #hero p {
-    color: #333; 
+    color: #2980b9; 
     max-width: 700px;
     margin: 0 auto;
-    line-height: 1.8; 
+    font-weight: bold;
 }
 
-/*  Разделители  секций  */
+/* Разделители секций */
 .container > section:not(:last-child) {
     border-bottom: 1px solid #ddd;
-    padding-bottom: 40px; 
+    padding-bottom: 40px;
 }
 
-/*  Адаптивный  дизайн  */
+/* Адаптивный дизайн */
 @media screen and (max-width: 768px) {
     .header-content {
         flex-direction: column;
         align-items: center;
     }
 
-    .qr-code-link {
-        display: none;
-    }
-
     .profile {
         margin-bottom: 20px;
+        flex-direction: column; /* Размещаем фото и информацию в колонку */
+        align-items: center; /* Выравнивание по центру */
     }
-
+    
+    .profile-photo {
+        margin-right: 0; /* Убираем отступ справа */
+        margin-bottom: 10px; /* Добавляем отступ снизу */
+    }
+    
     .buttons {
-        flex-direction: column; 
-        align-items: center; 
+        text-align: center;
+        display: flex;
+        flex-direction: column; /* Кнопки в столбик */
+        align-items: center;
     }
 
     .button {
-        width: 100%; 
-        margin: 5px 0; 
-        text-align: center; 
+        width: 100%;
+        margin: 5px 0;
     }
 
-    .profile-photo {
-        width: 120px;
-        height: 180px;
-    }
-
-    .experience-container,
-    .education-container {
-        grid-template-columns: 1fr;
+    /*  Скрываем  QR-код  на  мобильных  */
+    .qr-code-link {
+        display: none;
     }
 }
 
+/* Показываем QR-код на десктопных устройствах */
 @media screen and (min-width: 769px) {
     .qr-code-link {
         display: block;
