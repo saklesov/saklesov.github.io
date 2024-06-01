@@ -19,7 +19,7 @@ body {
 /* Стили для шапки сайта */
 header {
     background-color: #fff;
-    padding: 20px 0; /* Уменьшаем padding */
+    padding: 20px 0; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
 }
@@ -28,18 +28,18 @@ header {
     display: flex;
     align-items: flex-start; 
     justify-content: space-between;
-    flex-wrap: wrap; /* Позволяем элементам переноситься */
+    flex-wrap: wrap; 
 }
 
 .profile {
     display: flex;
-    align-items: center; /* Выравнивание по центру */
+    align-items: center; 
     margin-bottom: 20px; 
 }
 
 .profile-photo {
-    width: 150px; /* Уменьшаем ширину фото */
-    height: 225px; /* Уменьшаем высоту фото */
+    width: 150px; 
+    height: 225px; 
     margin-right: 20px;
     object-fit: cover;
     border-radius: 10px;
@@ -66,7 +66,7 @@ header {
 .qr-code-link {
     display: none; 
     align-self: flex-start;
-    margin-top: 20px; /* Добавляем отступ сверху */
+    margin-top: 20px; 
 }
 
 .qr-code {
@@ -78,8 +78,8 @@ header {
 /* Стили для кнопок */
 .buttons {
     display: flex;
-    flex-wrap: wrap; /* Позволяем кнопкам переноситься */
-    justify-content: center; /* Центрируем кнопки */
+    flex-wrap: wrap; 
+    justify-content: center;
     margin-top: 20px;
 }
 
@@ -93,7 +93,7 @@ header {
     transition: background-color 0.3s ease, box-shadow 0.2s ease;
     font-size: 16px;
     margin: 5px; 
-    min-width: 120px; /* Уменьшаем минимальную ширину */
+    min-width: 120px; 
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -176,7 +176,7 @@ footer {
 
 /* Пример стилей для раздела "Герой" */
 #hero {
-    padding: 60px 0; /* Уменьшаем padding */
+    padding: 60px 0; 
     text-align: center;
 }
 
@@ -206,19 +206,19 @@ footer {
 
     .profile {
         margin-bottom: 20px;
-        flex-direction: column; /* Размещаем фото и информацию в колонку */
-        align-items: center; /* Выравнивание по центру */
+        flex-direction: column; 
+        align-items: center; 
     }
     
     .profile-photo {
-        margin-right: 0; /* Убираем отступ справа */
-        margin-bottom: 10px; /* Добавляем отступ снизу */
+        margin-right: 0; 
+        margin-bottom: 10px; 
     }
     
     .buttons {
         text-align: center;
         display: flex;
-        flex-direction: column; /* Кнопки в столбик */
+        flex-direction: column;
         align-items: center;
     }
 
@@ -231,7 +231,7 @@ footer {
     .qr-code-link {
         display: none;
     }
-}
+} 
 
 /* Показываем QR-код на десктопных устройствах */
 @media screen and (min-width: 769px) {
