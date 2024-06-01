@@ -1,74 +1,213 @@
-/* styles.css */
+/* Импортируем шрифты */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@700&display=swap');
 
+/* Основные стили */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  background: linear-gradient(to bottom, #ecf0f1, #ffffff);
+  color: #333;
 }
 
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Стили для шапки сайта */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
+.header-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-nav li {
-    margin-right: 20px;
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
+/* Стили для фото профиля */
+.profile-photo {
+  width: 150px;
+  height: 225px;
+  margin-right: 20px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-nav a:hover {
-    color: #ccc;
+.profile-info {
+  display: flex;
+  flex-direction: column;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2em;
+.profile-info h1 {
+  margin: 0 0 5px 0;
+  font-size: 24px;
+  text-align: center; 
 }
 
+.profile-info p {
+  margin: 0;
+  font-size: 18px;
+  color: #555;
+  text-align: center; 
+}
+
+/* Стили для кнопок в шапке (десктоп) */
+.desktop-buttons {
+  display: block; /* Показываем на всех устройствах */
+  margin-top: 60px; 
+}
+
+.desktop-buttons .button {
+  padding: 6px 12px;
+  font-size: 14px; 
+}
+
+/* Стили для кнопок */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  margin-top: 20px; 
+}
+
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #2980b9;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
+  font-size: 16px;
+  margin: 5px;
+  min-width: 120px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+  background-color: #20638f;
+  box-shadow: 0px 4px 8px rgba(32, 99, 143, 0.4);
+}
+
+/* Стили для разделов */
 section {
-    background-color: #f7f7f7;
-    padding: 2em;
-    margin-bottom: 2em;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  opacity: 0; 
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-h1, h2, h3 {
-    color: #333;
+/* Убираем анимацию для секции "Обо мне" */
+#hero {
+  opacity: 1; 
+  transform: translateY(0); 
 }
 
-button {
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+section.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-button:hover {
-    background-color: #3e8e41;
+h2 {
+  color: #2980b9;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
 }
 
+h2 i {
+  margin-right: 10px;
+  color: #2980b9;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 40px;
+}
+
+/* Стили для опыта работы */
+.experience-item {
+  margin-bottom: 30px;
+}
+
+.company {
+  font-weight: bold;
+}
+
+.dates {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* Стили для образования */
+.education-item {
+  margin-bottom: 20px;
+}
+
+.speciality {
+  font-style: italic;
+}
+
+/* Стили для контактов */
+#contact ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#contact li {
+  margin-bottom: 10px;
+}
+
+/* Стили для подвала */
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
+  background-color: #2980b9;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Пример стилей для раздела "Герой" */
+#hero {
+  padding: 60px 0;
+  text-align: center;
+}
+
+#hero h2 {
+  color: #2980b9;
+}
+
+#hero p {
+  color: #2980b9;
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+/* Разделители секций */
+.container > section:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 40px;
+}
+
+/* Адаптивный дизайн */
+@media screen and (max-width: 768px) {
+  .profile-info h1, 
+  .profile-info p { 
     text-align: center;
-    clear: both;
+  }
 }
